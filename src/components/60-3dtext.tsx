@@ -9,7 +9,6 @@ import {
 import { useMemo, useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { InstancedMesh } from "three";
-import { useControls } from "leva";
 
 export default function Text3DScene() {
   const [matcap] = useMatcapTexture("27222B_677491_484F6A_5D657A");
