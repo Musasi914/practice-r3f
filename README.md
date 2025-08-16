@@ -59,3 +59,50 @@ drei の Html は、transfrom でカメラの方を向かないようにでき�
 
 // youtube
 useProgress ローダー
+
+// shopping
+Outline などの対象を Selection Select で選択できる
+useThree size で canvas サイズを取得できる
+カメラがスムーズに動く
+<code>
+useFrame((state, delta) => {
+easing.damp3(
+state.camera.position,
+[
+state.pointer.x,
+1 + state.pointer.y / 2,
+8 + Math.atan(state.pointer.x * 2),
+],
+0.3,
+delta
+);
+state.camera.lookAt(state.camera.position.x \* 0.9, 0, -4);
+});
+</code>
+TiltShift2 ボケ　公式乗ってない
+N8AO 影のぼかし　公式乗ってない
+N8A0→SSAO
+TiltShift2→DepthOfField
+Mask,useMask マスク
+
+// 3dCards
+ScrollControls のなかで useScroll で情報取れる scroll.offset、useFrame でスクロール量に応じて物体を動かす
+マウスでカメラを動かす。
+<code>
+easing.damp3(
+state.camera.position,
+[state.pointer.x * 2, state.pointer.y + 1.5, 10],
+0.3,
+delta
+);
+</code>
+drei の Image
+Image の radius は transparent 併用
+cylinderGeometry の openEnded=false でリボン的な
+ややこしい class 継承より shaderMaterial
+
+// fishCamera
+fishCamera 魚眼レンズみたいな
+CameraControls / PerspectiveCamera ドラッグでもいける
+react-spring/three の使い方
+MeshWobbleMaterial 揺れる　草とかよさそう
