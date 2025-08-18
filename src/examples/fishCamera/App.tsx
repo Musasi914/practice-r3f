@@ -21,7 +21,7 @@ export default function App() {
           <Box />
         </group>
         <Environment preset="city" background blur={1} />
-        {/* <PerspectiveCamera makeDefault position={[0, 0, 18.5]} /> */}
+        <PerspectiveCamera makeDefault position={[0, 0, 18.5]} />
       </Fisheye>
     </Canvas>
   );

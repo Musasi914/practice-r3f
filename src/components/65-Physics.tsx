@@ -3,7 +3,7 @@ import { useFrame } from "@react-three/fiber";
 import {
   // BallCollider,
   CuboidCollider,
-  CylinderCollider,
+  // CylinderCollider,
   InstancedRigidBodies,
   Physics,
   RapierRigidBody,

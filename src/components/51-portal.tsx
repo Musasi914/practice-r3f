@@ -129,10 +129,9 @@ function Model() {
   const poleMaterial = new MeshBasicMaterial({ color: 0xffcccc });
 
   const portalRef = useRef<ShaderMaterial>(null);
-  useFrame((state) => {
-    const time = state.clock.getElapsedTime();
+  useFrame((_, delta) => {
     if (portalRef.current) {
-      portalRef.current.uniforms.uTime.value = time;
+      portalRef.current.uniforms.uTime.value += delta;
     }
   });
   return (
