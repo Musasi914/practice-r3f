@@ -17,8 +17,8 @@ export default function R3fCanvas() {
     <Canvas
       shadows
       camera={{ position: [0, 0, 2.5], fov: 25 }}
-      gl={{ preserveDrawingBuffer: true }}
-      eventPrefix="client"
+      // gl={{ preserveDrawingBuffer: true }}
+      // eventPrefix="client"
       eventSource={document.getElementById("root")!}
     >
       <ambientLight intensity={2} />

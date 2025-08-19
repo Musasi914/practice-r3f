@@ -149,3 +149,9 @@ rotation は Euler 型　 → 　 dampE
 color は Color 型　 → 　 dampC
 ・easing.dampC(materials.lambert1.color, color, 0.25, delta); でシャツの色を変えてる
 easing.dampC(shadows.current.getMesh().material.color,undefined,0.25,delta); で AccumulativeShadows の色を変えてる AccumulativeShadows の色を変えると影を映す plane も影の色も変わる
+
+// caustics
+・Caustics 光が透過性表面を通過する際に生じる光の渦巻き。 光の向きを決めて、その子要素に光を当てたときの白い影を映す
+・MeshTransmissionMaterial 透過性マテリアル ガラスみたいなマテリアル
+・Performancemonitor でパフォーマンスを監視し、その props を渡してパフォーマンスを調整する
+・マテリアルのポリゴンオフセットを true にすると、重なり合うのが良くなったりする
